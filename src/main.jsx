@@ -4,8 +4,6 @@ import {
   ArrowDown,
   ArrowUpRight,
   BriefcaseBusiness,
-  Github,
-  Linkedin,
   Menu,
   Sparkles,
   X,
@@ -177,8 +175,8 @@ function App() {
               </button>
             </div>
             <div className="social-row" aria-label="Social links">
-              <a href={profile.github} target="_blank" rel="noreferrer"><Github size={19} /> GitHub</a>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={19} /> LinkedIn</a>
+              <a href={profile.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={17} /></a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={17} /></a>
             </div>
           </div>
 
