@@ -72,12 +72,12 @@ const experience = [
 
 const projects = [
   {
-    name: 'AnyForms',
-    type: 'Backend automation platform',
+    name: 'AnyForms Education',
+    type: 'Learning platform backend',
     description:
-      'A Java backend for sales operations automation. Includes scheduled amoCRM SalesBot drip campaigns, PostgreSQL-backed progress tracking, Flyway migrations, idempotency safeguards, and cluster-wide single-flight execution.',
-    tech: ['Java', 'Spring', 'PostgreSQL', 'Flyway', 'Docker', 'amoCRM'],
-    href: 'https://github.com/yanisderbikov/anyforms',
+      'A production-oriented Java 21 backend for the AnyForms education platform: email-code authentication, JWT sessions, paid-course access checks between services, PostgreSQL/Flyway persistence, direct S3 and Kinescope uploads, DRM-aware video access, and a full admin API.',
+    tech: ['Java 21', 'Spring Boot', 'PostgreSQL', 'Flyway', 'S3', 'Kinescope'],
+    href: 'https://github.com/yanisderbikov/edu.anyforms-back',
     index: '01',
   },
   {
