@@ -1,0 +1,5 @@
+.portrait {
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+}
