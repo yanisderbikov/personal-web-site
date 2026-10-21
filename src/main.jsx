@@ -1,14 +1,35 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowUpRight, ArrowRight, Mail, PenTool, Code2, Rocket, Check, Github, Linkedin } from 'lucide-react'
+import { ArrowUpRight, ArrowRight, Mail, PenTool, Code2, Rocket, Check } from 'lucide-react'
 import ExperiencePage from './ExperiencePage'
 import './styles.css'
 import './landing.css'
 
 const email = 'ian@derbikov.com'
+const avatar = 'https://avatars.githubusercontent.com/u/56488301?v=4'
 const subject = encodeURIComponent('My idea for a 3-day MVP')
 const body = encodeURIComponent("Hi Ian,\n\nHere's what I'd like to build:\n\nWho it's for:\n\nWhat the MVP should do:\n\nBest,\n")
 const contact = `mailto:${email}?subject=${subject}&body=${body}`
+
+// lucide-react 1.x dropped brand icons, so these are inlined
+function Github({ size = 24 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+      <path d="M9 18c-4.51 2-5-2-7-2"/>
+    </svg>
+  )
+}
+
+function Linkedin({ size = 24 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect width="4" height="12" x="2" y="9"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  )
+}
 
 function StudioLanding() {
   return (
@@ -27,6 +48,7 @@ function StudioLanding() {
           <div className="studio-topline"><span className="studio-led"></span> INDEPENDENT, FOUNDER-LED SOFTWARE STUDIO <span className="studio-topline-end">IAN DERBIKOV / NYC</span></div>
           <div className="studio-hero-grid">
             <div className="studio-hero-copy">
+              <a className="studio-founder" href="/experience"><img src={avatar} alt="Ian Derbikov"/><span><strong>Ian Derbikov</strong><small>Software Engineer · ex-Ecwid / Lightspeed</small></span><ArrowUpRight size={16}/></a>
               <p className="studio-index">YOUR IDEA, MADE REAL.</p>
               <h1>Design.<br/>Develop.<br/><span>Deploy.</span></h1>
               <p className="studio-hero-description">From the first sketch to a working product. I design, build, and launch custom software — with you working directly with me, not an account manager.</p>
@@ -60,7 +82,7 @@ function StudioLanding() {
         <section className="studio-about studio-container">
           <div className="studio-section-label"><span>02 / WHO YOU WORK WITH</span><span>PERSONAL BY DESIGN</span></div>
           <div className="studio-about-grid">
-            <div><p className="studio-kicker">HI, I'M IAN.</p><h2>Your developer.<br/><em>Not your middleman.</em></h2></div>
+            <div><p className="studio-kicker">HI, I'M IAN.</p><h2>Your developer.<br/><em>Not your middleman.</em></h2><figure className="studio-portrait"><img src={avatar} alt="Ian Derbikov" loading="lazy"/><figcaption><strong>Ian Derbikov</strong><span>Software Engineer · NYC</span></figcaption></figure></div>
             <div className="studio-about-detail"><p>I'm <strong>Ian Derbikov</strong>, a software engineer with experience building production systems at Ecwid / Lightspeed and end-to-end AI products.</p><p>Whether you're a founder testing an idea or a design studio that needs a dependable technical partner, you'll communicate directly with me. I handle the technical delivery and bring in trusted engineering support when the project needs it.</p><a href="/experience">More about my background <ArrowUpRight size={17}/></a></div>
           </div>
         </section>
